@@ -1,0 +1,82 @@
+#addModal{
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    font-family: "Comic Neue", "Comic Sans MS", "Comic Sans";
+}
+
+#addModal *{
+    font-family: "Comic Neue", "Comic Sans MS", "Comic Sans";
+    outline: none;
+}
+
+.fullBG{
+    background-color: #2525258e;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
+#createNotesForm{
+    top: 80px;
+    position: absolute;
+    background-color: white;
+    width: 550px;
+    justify-content: center;
+    padding: 20px 40px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+#createNotesForm h4{
+    text-align: center;
+    font-size: 1.2em;
+    border-bottom: #dee2e6 solid 1px;
+    padding-bottom: 10px;
+    margin: 10px 0;
+}
+
+#createNotesForm > input,
+#createNotesForm select,
+#createNotesForm > textarea{
+    border: #ced4da solid 0.67px;
+    padding: 6px 12px;
+    border-radius: 0.25rem;
+    margin-bottom: 10px;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.createBtn,.cancelBtn{
+    color: #fff;
+    outline: none;
+    margin: 0 50px;
+    padding: 5px 15px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Comic Neue", "Comic Sans MS", "Comic Sans";
+}
+
+.createBtn {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.cancelBtn{
+    background-color: #dc3545;
+    border-color: #dc3545;
+}

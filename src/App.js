@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import AddModal from './leftMenu/addModal';
+import LeftMenu from './leftMenu/index'
+import NotesContent from './notesContent/index'
+import React, {useState} from 'react';
+import { BrowserRouter as Router} from 'react-router-dom';
 
-function App() {
+export default function App() {
+
+  const [isAddModal, setIsAddModal] = useState(false);
+
+  const openModel = () => {
+    setIsAddModal(true);
+  }
+
+  const closeModal = () => {
+    setIsAddModal(false);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div className='App'>
+      {isAddModal?<AddModal closeModal={closeModal}/>:null}
+      <div className={`App ${isAddModal?"blur":""}`}>
+
+      <LeftMenu openModel={openModel}/>
+      <NotesContent/>
+      </ div>
     </div>
+    </Router>
   );
 }
-
-export default App;
